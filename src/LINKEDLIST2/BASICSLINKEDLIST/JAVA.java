@@ -6,6 +6,16 @@ public class JAVA {
             System.out.print(head.data+" ");
             displayurr(head.next);
     }
+    public static int lengthll(Node head){
+        int count=0;
+        while(head!= null){
+            count++;
+            head=head.next;
+
+        }
+        return count;
+
+    }
     public static void reversedisplay(Node head){
         if (head==null) return;
         reversedisplay(head.next);
@@ -49,6 +59,8 @@ public class JAVA {
         displayurr(a);
         System.out.println();
         reversedisplay(a);
+        System.out.println();
+        System.out.println(lengthll(a));
 
     }
 }
