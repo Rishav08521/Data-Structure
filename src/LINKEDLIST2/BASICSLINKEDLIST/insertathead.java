@@ -29,6 +29,13 @@ public class insertathead {
             }
 
         }
+        int getel(int idx){
+            Node temp=head;
+            for (int i=1;i<=idx-1;i++){
+                temp=temp.next;
+            }
+            return temp.data;
+        }
         int size(){
             Node temp=head;
             int count=0;
@@ -50,6 +57,8 @@ public class insertathead {
         ll.display();
         System.out.println();
         System.out.println(ll.size());
+        System.out.println(ll.getel(1));
+
 
     }
 }
