@@ -11,6 +11,7 @@ package LINKEDLIST2.BASICSLINKEDLIST;
 class linkedlll{
     Node head=null;
     Node tail=null;
+
     void insertatanyindx(int idx, int val){
         Node t=new Node(val);
         Node temp=head;
@@ -65,6 +66,22 @@ class linkedlll{
         }
         return count;
     }
+     void deletelinkedlist(int idx){
+        if (idx>=size()){
+            System.out.println("cant delete");
+            return;
+        }
+        if(idx==0){
+            head = head.next;
+            return;
+        }
+
+        Node temp=head;
+        for (int i=1;i<=idx-1;i++){
+            temp=temp.next;
+        }
+        temp.next=temp.next.next;
+     }
 }
 public class insertatanyindex{
 
@@ -82,6 +99,7 @@ public class insertatanyindex{
         System.out.println();
         ll.display();
         System.out.println();
-
+        ll.deletelinkedlist(8);
+        ll.display();
     }
 }
