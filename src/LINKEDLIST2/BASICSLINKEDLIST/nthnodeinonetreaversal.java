@@ -8,6 +8,25 @@ public class nthnodeinonetreaversal {
             this.data=data;
         }
     }
+    public static node deletenthnodefromend(node head, int n){
+        node slow=head;
+        node fast=head;
+        for (int i=1;i<=n;i++){
+            fast=fast.next;
+        }
+        if (head==null){
+            head=head.next;
+            return head;
+        }
+        while (fast!=null)
+        {
+            slow=slow.next;
+            fast=fast.next;
+        }
+        slow.next=slow.next.next;
+        return head;
+
+    }
     public static node nthnode(node head, int idx){
         //node temp=head;
         //int size=0;
@@ -56,10 +75,12 @@ public class nthnodeinonetreaversal {
         e.next=f;
         display(a);
         System.out.println();
-        nthnodedelete(a,3);
+//        nthnodedelete(a,3);
+//        display(a);
+//        //node t=nthnode(a,4);
+//        //System.out.println(t.data);
+//        System.out.println();
+        a=deletenthnodefromend(a, 2);
         display(a);
-        //node t=nthnode(a,4);
-        //System.out.println(t.data);
-
     }
 }
