@@ -23,11 +23,20 @@ public class reverselinkedlist {
 //            temp=temp.next;
 //        }
 //    }
-    public static void display(node head) {
+    public static void displayrev(node head) {
         if (head == null) return;
 
         System.out.print(head.data + " ");
-        display(head.next);
+        displayrev(head.next);
+
+    }
+    public static void dis(node head){
+        if (head==null) {
+            System.out.println();
+            return;
+        }
+        System.out.print(head.data+" ");
+        dis(head.next);
     }
 
     public static void main(String[] args) {
@@ -42,10 +51,9 @@ public class reverselinkedlist {
         c.next=d;
         d.next=e;
         e.next=f;
-
-        display(a);
+        displayrev(a);
         System.out.println();
         a=reverse(a);
-        display(a);
+        displayrev(a);
     }
 }
