@@ -28,15 +28,15 @@ public class twoarraylistsortedway {
             }
         }
 
-//        while(st1<n1){
-//            gt.add(st.get(st1));
-//            st1++;
-//        }
-//
-//        while(st2<n2){
-//            gt.add(at.get(st2));
-//            st2++;
-//        }
+        while(st1<n1){
+            gt.add(st.get(st1));
+            st1++;
+        }
+
+        while(st2<n2){
+            gt.add(at.get(st2));
+            st2++;
+        }
 
         System.out.println(gt);
 
