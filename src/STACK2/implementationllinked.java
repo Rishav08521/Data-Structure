@@ -45,6 +45,7 @@ public class implementationllinked {
 
         }
         int size(){
+
             return size;
         }
     }
