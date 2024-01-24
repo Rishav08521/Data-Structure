@@ -17,12 +17,18 @@ public class maxelementinarray {
         System.out.println("frequency map");
         System.out.println(sh.entrySet());
         int max=0;int ans=-1;
-        for( var ee: sh.entrySet() ){
-            if (ee.getValue()>max){
-                max= ee.getValue();
-                ans=ee.getKey();
+//        for( var ee: sh.entrySet() ){
+//            if (ee.getValue()>max){
+//                max= ee.getValue();
+//                ans=ee.getKey();
+//            }
+//        }
+        for (var key : sh.keySet()){
+            if (sh.get(key)>max){
+                max=sh.get(key);
+                ans=key;
             }
         }
-        System.out.println(ans);
+        System.out.printf(" %d has max frequnency ans its occur %d times",ans, max);
     }
 }
