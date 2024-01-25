@@ -4,7 +4,7 @@ import linkedlist.singlelinklist;
 
 import java.util.*;
 
-//public class implementationhashmap {
+//gitpublic class implementationhashmap {
 //    static class myHashMap<k,v>{
 //        public static final int DEFAULT_CAPACITY=4;
 //        //public static final float DEFAULT_LOAD_FACTOR=0.75f;
