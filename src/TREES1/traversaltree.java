@@ -71,4 +71,18 @@ public class traversaltree {
         preorder(root.left);
         preorder(root.right);
     }
+    private static void delete(Node root, int target){
+        if (root==null) return;
+        if (root.val>target){
+            if (root.left==null) return;
+            if (root.left.val==target) root.left=null;
+            else delete(root.left,target);
+        }
+        else{
+            if (root.right==null) return;
+            if (root.right.val<target) root.right=null;
+            else delete(root.right,target);
+        }
+
+    }
 }
